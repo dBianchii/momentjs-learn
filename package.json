@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && node dist/index.js",
+    "rrule": "tsc && node dist/rrule.js",
+    "postinstall": "prisma db push && prisma generate"
   },
   "keywords": [],
   "type": "module",
@@ -12,9 +14,13 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.6.0",
+    "prisma": "^5.3.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "@prisma/client": "^5.3.1",
+    "moment": "^2.29.4",
+    "node-fetch": "^3.3.2",
+    "rrule": "^2.7.2"
   }
 }
